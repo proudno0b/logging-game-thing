@@ -12,8 +12,8 @@ WIDTH,HEIGHT = screensize
 
 
 
-amogus = Actor("test",(100,100))
-
+#amogus = Actor("test",(100,100))
+option1 = "shop"
 def restartgame():
 
 
@@ -39,18 +39,26 @@ def on_mouse_down(pos,button):
     print(allText)
     for i in range(len(allText)):
         print(f"scene of obj is {allText[i].scene}, current scene is {scene},value of obj is \'{allText[i].value}\'")
-    amogus.center = pos
+    #amogus.center = pos
 
 color = 255 
 
 mainMenu = textBox("Boilerplate logging game\n press any mouse button to continue",(WIDTH /2, HEIGHT /2),scene="mainmenu")
-monthFlavorText = textBox(f"Welcome Mr./Ms/Mx. Debug! this is month {month} of your tenure as CEO of Debug's Logging company\n Current Company Treasury Balance:{money}",(HEIGHT/2,WIDTH*0.75),"game")
+monthFlavorText = textBox(f"Welcome Mr./Ms/Mx. Debug! this is month {month} of your tenure as CEO of Debug's Logging company\n Current Company Treasury Balance:{money}",(WIDTH*0,HEIGHT * 0),"game")
+statistics = textBox(f"STATISTICS \ntrees left in forest: {(numTrees/maxTrees)*100}%\n current employees: {numEmployees} employee pay rate: ${employeeWage}/hr\n employee shift length {employeeHours} hrs/day",(0,40),"game")
+projectedRevenue = textBox(f"Projected revenue/expenses for the month: ${numEmployees*employeeEfficiency*employeeHours*20*logPrice} - ${employeeHours*employeeWage}",(0,200),"game")
+options = textBox(f"Options (press number key to select): 1:shop",(WIDTH/2,HEIGHT/2),"game")
+shopOptions = textBox(f"SHOP:\nhire more employees\nupgrade logging equipment:$1000/employee\nbuy more land\n",(0,0),"shop")
 def update():
     global color,monthFlavorText  
     monthFlavorText.value = f"Welcome Mr./Ms./Mx. Debug! this is month {month} of your tenure as CEO of Debug's Logging company\n Current Company Treasury Balance:{money}"
 
 
-
+def on_key_down(key):
+    if key == keys.K_1:
+        scene = "shop"
+    else:
+        scene = "mainmenu"
 def draw():
     global WIDTH, HEIGHT,scene
     screen.clear()
