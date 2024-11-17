@@ -6,11 +6,12 @@ try:
     screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 except:
     try:
-        screensize = 1920,1080
+        screensize = 800,500
     except:
         screensize = int(input("please input your desired screen width")),int(input("please enter your desired screen height"))
 textpos = []
-HEIGHT, WIDTH = screensize
+WIDTH,HEIGHT = screensize
+
 
 def restartgame():
     global numTrees,employeeWage,employeeHours,numEmployees,angermeter,logPrice,employeeEfficiency,equipmentlvl,month
@@ -24,19 +25,30 @@ def restartgame():
     employeeEfficiency = 1
     equipmentlvl = 1
 def on_mouse_down(pos,button):
-    pass
+    global scene
+    if scene == "mainmenu":
+        scene = "game"
+color = 255
 def update():
-    pass
+    global color
+    color += 0
+    #color %= 256
+    #print(color)
 def draw():
+    global WIDTH, HEIGHT
     screen.clear()
-    screen.fill((255,255,255))
-    if True: #scene == "mainmenu":
-        screen.draw.text("Boilerplate logging game",(WIDTH/2,HEIGHT/2),fontsize=50)
-        print("aaaa")
+    screen.fill((color,color,color))
+    menucoords = [WIDTH/2, HEIGHT /2]
+    print(WIDTH,HEIGHT)
+    print(menucoords)
+    
+    if scene == "mainmenu":
+        screen.draw.text("Boilerplate logging game\n press any key to continue", center=menucoords,color="black")
+        
+        for obj in objects:
+            object.draw()
     else:
-        print("help")
-    for obj in objects:
-        object.draw()
+        print("something is wrong")
 
 
 pgzrun.go()
