@@ -1,0 +1,61 @@
+(copy pasted from google docs)
+
+simple singleplayer game about logging???/other resource management industry where you cut down trees/etc and if you run out of trees you lose but if you don't make enough money you get replaced as CEO
+
+maintain trees
+buying more land
+planting more trees
+cutting less trees
+morality (hidden from player)
+workers - affects rate of trees cut
+workers salary - starts off at a default rate, affects rate of trees cut
+amount of trees
+money
+pay your workers
+revenue - based on rate of trees cut, you can add/subtract from price (too high - no one will buy it)
+Sell trees for money 
+events that happen? (log fever, forest fire)
+turn based - 1 month
+inflation
+
+Game mechanics/gameplay loop
+Setup:
+Random amount of trees in forest
+Newly appointed CEO of struggling lumber company, investors angery so they replaced old CEO with you
+Loss conditions:
+Run out of trees (mega lose) very very bad, minus one morbillion points on high score
+Run out of money (lose) decently bad, minus 1/16th of a morbillion points on high score lb
+Too much bad PR, get smited by the FTC (if only this happened in real life) (penalty, maybe not outright loss, no leaderboard penalty)
+Anger Investors by not meeting quarterly profit quota, increases every month by a % (no leaderboard penalty)
+
+Win conditions:
+Make set amount of money with set amount of reputation to “retire”/sell to big wall street firmTM (add free play mode?) (x2 point multiplier)
+
+Gameplay options:
+late game option - buy land to grow trees/increase trees available to be cut (one at a time, limited supply, expensive)
+replanting trees (month)
+Adjust worker pay (button)
+higher pay - slightly more trees cut, lower pay - slightly less trees cut and workers are angry, can leave
+Adjust wood price (button)
+Hire/Fire workers (% chance per month to leave if pay too low)
+Buy better equipment (increases trees cut/month/worker)
+Set cap on trees cut/month
+Set tree cutting method (coppicing increases tree regrowth by 25% /clear cutting increases wood per tree by 25%)
+
+money
+pay your workers
+revenue - based on rate of trees cut, you can add/subtract from price (too high - no one will buy it)
+Let's say you need $10 million smogglecoin $MOG to retire/win the game
+
+
+Background
+Climate change is a big issue for the current time. Part of what makes it so complex and challenging is that many of the industries and systems that benefit us are big contributors to global warming. For example, trees are an important source of oxygen, but they are cut down so their wood can be used to benefit us. In Boilerplate Logging Game, you play as the CEO of a logging company and manage your trees, employees, and income to succeed.
+
+Purpose
+With Boilerplate Logging Game we wanted to explore how corporations affect the environment and how they can play a role in sustainability. We hope that players of the game will be able to have fun while also learning about corporations and the environment.
+
+Process
+To begin, we brainstormed ideas. We originally thought about making some sort of application involving geolocation data, but ended up choosing to make a game since it seemed attainable given our skill set. We eventually landed on our final idea and began fleshing it out by outlining game mechanics. After we had a general idea of what our game would look like, we started programming. Boilerplate Logging Game was mainly programmed by Xingkong since they have experience making visual games in Python. They faced their share of roadblocks, but managed to overcome them in order to finish something.
+
+Potential
+Boilerplate Logging Game could become a fully realized game and open up conversations around corporate responsibility regarding the environment and ethics, and illustrate the absurdity of the expectation that corporations increase profits infinitely in a finite world.
