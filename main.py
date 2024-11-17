@@ -35,8 +35,6 @@ def on_mouse_down(pos,button):
     global scene
     if scene == "mainmenu":
         scene ="game"
-    else:
-        print("skibidi rizz")
     print("mouse was pressed")
     print(allText)
     for i in range(len(allText)):
@@ -62,7 +60,7 @@ def draw():
         #if text.visible:
         if text.scene == scene:
             screen.draw.text(text.value,text.pos,color=text.color)
-        else:
+
             
 
 
